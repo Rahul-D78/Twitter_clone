@@ -3,8 +3,11 @@ import { createConnection } from 'typeorm'
 import { Post } from './entities/Post';
 import { User } from './entities/User';
 import { allRoute } from './routes/allRoutes'
+const cors = require('cors');
+
 const app = express();
-const PORT = process.env.PORT || 3000;
+app.use(cors())
+const PORT = process.env.PORT || 4000;
 app.use(express.json());
 app.use(allRoute)
 
