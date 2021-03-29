@@ -1,5 +1,5 @@
 <p align="center">
-    <a href="#" target="_blank"><img src="https://wac-cdn.atlassian.com/dam/jcr:d301bbc5-1af2-45dc-b39e-cded30e12b8b/DevOps%20infinity%20wheel_CLOUD-PRODUCTS-JSM@2x.png?cdnVersion=1521" height="70" alt="devops logo"/></a>
+    <a href="#" target="_blank"><img src="https://image.flaticon.com/icons/png/512/23/23931.png" height="70" alt="devops logo"/></a>
 </p>
 
 ## Project Setup & Overview :
@@ -35,13 +35,13 @@ Twiiter clone powered by Node.js and React.js .
 2. Create database user and grant all privileges
 
 ```SQL
- $create database conduit;
+ $create database twitter;
 
- $create user conduit with encrypted password 'conduit';
+ $create user twitter with encrypted password 'twitter';
 
  `swith to the newly created db and grant all privileges to the user`
 
- $grant all privileges on database conduit to conduit;
+ $grant all privileges on database twitter to twitter;
 
 ```
 
