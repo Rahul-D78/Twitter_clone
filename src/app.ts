@@ -2,9 +2,11 @@ import express from 'express';
 import { createConnection } from 'typeorm'
 import { Post } from './entities/Post';
 import { User } from './entities/User';
+import { allRoute } from './routes/allRoutes'
 const app = express();
 const PORT = process.env.PORT || 3000;
 app.use(express.json());
+app.use(allRoute)
 
 app.get("/", (req, res) => {
     res.send("HLW to the new project");

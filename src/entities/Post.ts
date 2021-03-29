@@ -4,13 +4,13 @@ import { User } from "./User";
 @Entity('posts')
 export class Post {
    @PrimaryGeneratedColumn()
-   id: number
+   id: string
 
    @Column({length: 200, nullable: false})
    body: string
 
-   @Column({type : 'text', nullable: false})
-   tags: string[]
+   @Column({type : 'text', nullable: true})
+   tags?: string[]
 
    @Column({default: 0})
    favoritesCount ?: number
@@ -23,4 +23,8 @@ export class Post {
 
    @ManyToOne(() => User)
    author: User
+
+   constructor( body: string) {
+        this.body = body
+   }
 }

@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryColumn } from "typeorm";
+import { Column, Entity, JoinTable, ManyToMany, PrimaryColumn } from "typeorm";
+import { Post } from "./Post";
 
 @Entity('users')
 export class User {
@@ -16,4 +17,10 @@ export class User {
 
     @Column({type: 'text',nullable: true})
     bio?: string 
+    
+    constructor(email: string, username: string, password: string) {
+        this.email = email;
+        this.username = username;
+        this.password = password
+    }
 }
